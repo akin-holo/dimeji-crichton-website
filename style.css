@@ -142,7 +142,10 @@ article img {
    margin: 0 auto;
    border-radius: 50%;
 }
-.article-heading {
+.img-search-tm {
+   border-radius: 10px;
+}
+article h3 {
    color: #76da24;
    padding: 5px;
    text-align: center;
@@ -239,18 +242,17 @@ footer {
             width: 100%;
          }
       
-         .tm-txt-content {
-            position: relative;
-            z-index: 2;
-         }
-         .article-heding {
+         article h3 {
             color: var(--primary-color);
             border-bottom: 2px solid #000;
             background-color: transparent;
             border-radius: 0;
-           
             text-align: justify;
             margin: 5px auto;
+            font-weight: bold;
+         }
+         .tm-search-heading {
+            font-size: 1.1em;
          }
          article img {
             margin: 0 auto;
