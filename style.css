@@ -114,6 +114,7 @@ h1 {
    justify-content: center;
    align-items: center;
    margin-top: 2em;
+
 }
 .our-service {
    text-transform: uppercase;
@@ -127,8 +128,11 @@ article {
    justify-content: center;
    align-items: center;
    padding-bottom: 5px;
+   margin: 20px auto 30px;
    border-bottom: 1px solid #428d0428;
    border-radius: 20px;
+   background-color: #f0f8ff79;
+
 }
 article div {
    width: 40%;
@@ -136,8 +140,9 @@ article div {
 article img {
    display: block;
    margin: 0 auto;
+   border-radius: 50%;
 }
-.article-heding {
+.article-heading {
    color: #76da24;
    padding: 5px;
    text-align: center;
