@@ -1,11 +1,31 @@
 :root {
    --primary-color: #428d04;
    --light-blue: #add8e6;
+   --light-bg-color: #00000038;
 }
 
 * {
    margin: 0;
    padding: 0;
+}
+
+body {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+}
+.overlay {
+   position: absolute;
+   left: 0;
+   right: 0;
+   width: 100%;
+   height: 100vh;
+   margin: 0;
+   background-image: url("assets/pexels-yankrukov-7698909.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center; 
+   z-index: -1;
 }
 
 a {
@@ -15,10 +35,8 @@ a {
 header {
    display: flex;
    flex-direction: column;
-   /* justify-content: space-around;
-   align-items: center; */
    padding-bottom: 50px;
-   /* background-color: var(--primary-color); */
+   background-color: var(--light-bg-color);
 }
 .contact-channel {
    display: flex;
@@ -47,28 +65,7 @@ header {
    transition: 0.4s;
 }
 
-.hero {
-   position: relative;
-   display: flex;
-   flex-direction: column;
-   height: calc(100vh - 20px);
-}
-.overlay {
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   background-image: url("assets/pexels-yankrukov-7698909.jpg");
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center; 
-}
-.hero-contents {
-   display: flex;
-   flex-direction: column;
-   height: 100%;
-   background-color: #0000005d;
-   z-index: 2;
-}
+
 .nav-wrap {
   display: flex;
 }
@@ -76,6 +73,7 @@ nav {
    display: flex;
 }
 
+/* ..... hamburger menu start .....*/
 .hamburger {
    position: relative;
    top: 0;
@@ -133,7 +131,8 @@ nav input:checked ~ .hamburger:after {
 nav input:checked ~ ul {
    right: 0;
    box-shadow: -20px 0 40px rgba(0, 0, 0, 0.454);
-} 
+}
+/* ..... hamburger menu end .....*/ 
 
 .nav-list {
    display: flex;
@@ -151,15 +150,19 @@ nav input:checked ~ ul {
    transition: 0.4s;
 }
 
-.tagline {
-   margin: auto 0;
-   text-align: center;
 
+main {
+}
+.tagline {
+   color: #fff;
+   text-align: center;
+   background-color: var(--light-bg-color);
+   padding-bottom: 45vh;
 }
 .company-name{
    color: #fff;
    text-transform: capitalize;
-   text-shadow: -1px -1px 2px #00000082;
+   text-shadow: -1px -1px 2px var(--light-bg-color);
    font-weight: bolder;
    font-size: 2.5em;
    font-family: "Oswald", sans-serif;
@@ -167,7 +170,6 @@ nav input:checked ~ ul {
 .motto {
    color: #fff;
    text-align: left;
-   /* margin-left: 2em; */
    text-indent: 25%;
    font-style: italic;
    font-size: 2em;
@@ -177,70 +179,41 @@ nav input:checked ~ ul {
    color: #fff;
    width: 150px;
    padding: 20px;
-   margin: 20px auto;
+   margin: 2em auto;
    background-color: #0000ff;
+   border: 1px solid transparent;
    border-radius: 5px;
    font-weight: bold;
    font-size: 1.5em;
 }
-
-/* .services-wrapper {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   margin-top: 2em;
-
-} */
-/* .our-service {
-   text-transform: uppercase;
-   text-align: center;
-   margin: 20px auto;
-   background-color: #f5f5dc;
-   border-bottom: 2px solid #428d04;
-} */
-/* article {
-   display: flex;
-   position: relative;
-   justify-content: center;
-   align-items: center;
-   padding-bottom: 5px;
-   margin: 20px auto 30px;
-   border-bottom: 1px solid #428d0428;
-   border-radius: 20px;
-   background-color: #f0f8ff79;
-
-} */
-/* article div {
-   width: 40%;
-   margin-top: 4rem;
-} */
-/* article img {
-   display: block;
-   margin: 0 auto;
-   border-radius: 50%;
-} */
-/* .img-search-tm {
-   border-radius: 10px;
-} */
-/* article h3 {
-   position: absolute;
-   color: #76da24;
-   top: 0;
-   right: 0;
-   left: 0;
-   padding: 5px;
-   text-align: center;
-   margin: 10px auto;
-   background-color: #000;
-   border-radius: 30px;
-   font-weight: 900;
-   font-size: 1.3rem;
+.call-action:hover {
+   background-color: #00000078;
+   border: 1px solid #0000ff;
 }
-.article-para { */
-   /* font-size: 1.1em;
-   margin: 10px auto;
-} */
+.service-summary {
+   font-size: 1.6rem; 
+   font-weight: 900;
+}
+.service-summary span {
+   padding: 2px;
+   background-color: #ffffff62;
+   border-radius: 10px;
+}
+.trade-span {
+   color: #c51f1f;
+}
+.patent-span{
+color: rgb(1, 69, 1);
+}
+.copyright-span {
+   color: #0000ff
+}
+.design-span {
+   color: #800080;
+}
+.right-span {
+   color: #000;
+}
 
 
 footer {
