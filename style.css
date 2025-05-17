@@ -7,6 +7,7 @@
 * {
    margin: 0;
    padding: 0;
+   scroll-behavior: smooth;
 }
 
 body {
@@ -71,7 +72,20 @@ header {
 
 .nav-wrap {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 2rem;
 }
+.brand {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+} 
+small {
+   color: var(--primary-color);
+   font-weight: bold;
+}
+
 nav {
    display: flex;
 }
@@ -143,13 +157,18 @@ nav input:checked ~ ul {
    gap: 2em;
 }
 .nav-list li a {
+   color: #fff;
    text-decoration: none;
    padding: 5px 10px;
-   font-size: 1.2em;
+   border-bottom: 1px solid var(--light-blue);
+
+   font-weight: 900;
+   font-size: 1em;
 }
 .nav-list li a:hover {
-   border-bottom: 2px solid #fff;
-   transition: 0.4s;
+   background-color: #00000060;
+   border-bottom: none;
+   transition: 0.3s;
 }
 
 
@@ -254,6 +273,10 @@ footer {
    margin-top: 50px;
    background-color: #000;
 }
+footer .contact  a {
+   color: #add8e6;
+   display: block;
+}
 
         /* Moblie View */
         @media screen and (max-width: 900px) {
@@ -263,11 +286,7 @@ footer {
 
          nav {
             padding-bottom: 20px;
-            /* display: flex;
-            align-items: center;
-            width: 100%;
-            height: auto;
-            border-radius: 0; */
+           
          } 
          /* .brand {
             background-color: transparent;
