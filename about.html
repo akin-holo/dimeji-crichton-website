@@ -15,13 +15,104 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="style.css">
+   <!-- <link rel="stylesheet" href="style.css"> -->
+
+   <style>
+      * {
+         padding: 0;
+         margin: 0;
+      }
+
+      body {
+         font-weight: 400;
+      }
+      header {
+         display: none;
+         background-color: #428d04;
+      }
+
+      main h1 {
+         max-width: 50%;
+         text-align: center;
+         margin: 20px auto;
+         border-bottom: 2px solid #428d04;
+         font-family: 'Oswald';
+      }
+
+      .text-wrapper {
+         margin: auto 2%;
+      }
+      main p {
+         text-align: center;
+         line-height: 25px;
+         margin: 30px auto;
+         font-size: 18px;
+      }
+
+      aside {
+         display: flex;
+         height: 400px;
+         text-align: center;
+         justify-content: center;
+         align-items: center;
+         margin: auto 5%;
+         gap: 3em;
+      }
+
+      .business-class {
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         width: 65%;
+         height: 100%;
+         margin: auto auto;
+         background-image: url("https://github.com/akin-holo/image-preview/blob/main/assets/intership/AipilYin/empty-office.jpg?raw=true");
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+      }
+      .location-class {
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         width: 35%;
+         height: 100%;
+         background-image: url("https://github.com/akin-holo/image-preview/blob/main/assets/intership/AipilYin/smartphone-location.jpg?raw=true");
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+      }
+       .overlay {
+         position: absolute;
+         top: 0;
+         right: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: #00000098;
+         z-index: 1;
+      }
+      aside a {
+         text-decoration: none;
+         z-index: 2;
+      }
+      aside h2 {
+         color: #fff;
+         text-transform: capitalize;
+         font-weight: normal;
+         font-family: 'Oswald';
+      }
+
+   </style>
 </head>
 <body>
-   <div class="overlay"></div>
    <header>
-      <div class="contact-channel">
-         <div class="contacts">
+      <div class="">
+         <!-- <div class="contacts">
             <a href="#">
                <i class="fa-solid fa-location-dot"></i>
                <span>69b. Cruz Garden Estate, Kusenla Road, Ikate, Lekki, Lagos</span>
@@ -45,28 +136,28 @@
             <a href="#">
 
             </a>
-         </div>
+         </div> -->
       </div>
       <div class="nav-wrap">
-         <div class="brand">
+         <!-- <div class="brand">
             <img class="logo" src="assets/logo.png" alt="Crichton IP logo">
-            <!-- <small>Crichton Intellectual Property Consultant</small> -->
-         </div>
+            <small>Crichton Intellectual Property Consultant</small>
+         </div> -->
          <nav>
             <input type="checkbox" class="toggle-menu">
             <div class="hamburger"></div>
             <ul class="nav-list">
                <li>
-                  <a href="#" aria-current="page">Home</a>
+                  <a href="/">Home</a>
                </li>
                <li>
-                  <a href="/about.html">About</a>
+                  <a href="#" aria-current="page">About</a>
                </li>
                <li>
                   <a href="">Contact</a>
                </li>
                <li>
-                  <a href="#companyServices">Services</a>
+                  <a href="#CompanyServices">Services</a>
                </li>
             </ul>
          </nav> 
@@ -74,67 +165,35 @@
    </header>
 
    <main> 
-      <div style="background-color: #0000006c;">
-         <br>
-         <br>
-         <br>
-         <br>
-      </div>
-      
-      <div class="tagline">
-         <h1 class="company-name">Crichton Intellectual Property Consultant</h1>
-         <p class="motto">...  Protect Your Brand!</p>
-         <a href="#" class="call-action">Contact</a>
-         <p class="service-summary">protection of your <em class="trade-em">trademarks</em>, <em class="patent-em">patents</em>, <em class="copyright-em">copyrights</em>, <em class="design-em">industrial design</em> and other intellectual property <em class="right-em">rights</em></p>
-      </div>
+      <h1>About Us</h1>
 
-      <div class="company-services" id="companyServices">
-         <h2>Our Services</h2>
-         <!-- <p>We secure the legal rights to your properties</p> -->
-         <div class="service-wrapper">
-            <div class="service service-tm">
-               <img src="assets/trademark.webp" alt="trademark stamp">
-               <h3>Trademark Registration <span>&trade;</span></h3>
-               <p> Secure the legal rights to your business name, logo, and slogans by registering them with the Nigerian Trademarks Registry.</p>
-            </div>
-            <div class="service service-tm-search">
-               <img src="assets/Search-Trademark.jpg" alt="searching trademark">
-               <h3>Trademark Availability Search</h3>
-               <p>Verify that a trademark is unique and not already registered to avoid conflicts.</p>
-            </div>
-             <div class="service service-tm">
-               <img src="" alt="">
-               <h3>Trademark Renewal and Recordals</h3>
-               <p>Maintain trademark rights by renewing registrations and updating ownership details.</p>
-            </div>
-            <div class="service patients-reg">
-               <img src="" alt="">
-               <h3>Patents Registration &reg;</h3>
-               <p>Granting exclusive right for an invention, providing legal protection to inventors.</p>
-            </div>
-            <div class="service service-copyright">
-               <img src="" alt="">
-               <h3>Copyright Registration &copy;</h3>
-               <p>Control the reproduction, distribution, licensing, and use of your products during their lifetime</p>
-            </div>
-            <div class="service service-nafdac">
-               <img src="assets/nafdac.png" alt="">
-               <h3>NAFDAC Registration</h3>
-               <p>Ensure regulatory approval for food, drugs, cosmetics, and other consumables in Nigeria.</p>
-            </div>
-            <div class="service service-cac">
-               <img src="assets/cac.jpg" alt="CAC logo">
-               <h3>CAC Registratio</h3>
-               <p>Obtain legal recognition for a business by registering it with Nigeria's Corporate Affairs Commission (CAC), ensuring compliance and legitimacy.</p>
-            </div>
-            <div class="service service-tm">
-               <img src="assets/industrial-design.png" alt="">
-               <h3>Industrial Designs</h3>
-               <p>We specialize in industrial design that merges creativity with functionality.</p>
-            </div>
-         </div>
+      <div class="text-wrapper">
+         <p>Crichton Intellectual Property Consultant was established with a vision to deliver exceptional intellectual property and regulatory
+            compliance services to meet the evolving needs of businesses and innovators. Our firm is dedicated to protecting and managing
+            intellectual assets through innovative, cost-effective, efficient, and practical intellectual property solutions. In addition, we assist in ensuring that
+            businesses are duly formed and operated in accordance with the relevant regulatory requirements and continuing obligations. 
+         </p>
+
+         <p>
+            We specialize in filing and managing trademarks, patents and copyrights, and facilitate all necessary registrations with the National Agency for Food and Drug Administration and Control (NAFDAC)
+         </p>
       </div>
    </main>
+
+   <aside class="biz-and-location-wrapper">
+      <div class="business-class">
+         <div class="overlay"></div>
+         <a href="/index.html#companyServices">
+            <h2>our business</h2>
+         </a>
+      </div>
+      <div class="location-class">
+         <div class="overlay"></div>
+         <a href="#">
+            <h2>location facts</h2>
+         </a>
+      </div>
+   </aside>
 
    <!-- <aside>
       <h4>Team Members</h4>
@@ -180,7 +239,7 @@
             <h5>Quick links</h5>
             <div>
                <a href="" aria-current="page">Home</a>
-               <a href="/about.html" aria-current="page">About</a>
+               <a href="">About</a>
                <a href="">Contact</a>
                <a href="#OurServices">Services</a>
             </div>
