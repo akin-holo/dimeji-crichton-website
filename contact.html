@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contact Us | Crichton Intellectual Property Consultant</title>
+   <meta name="description" content="">
+
+   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+   <link rel="manifest" href="/site.webmanifest">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+   <!-- <link rel="stylesheet" href="style.css"> -->
+
+   <style>
+      * {
+         padding: 0;
+         margin: 0;
+      }
+
+      body {
+         font-weight: 400;
+      }
+
+      .home {
+         display: flex;
+         color: #fff;
+         width: fit-content;
+         padding: 0.6em 1em;
+         text-decoration: none;
+         justify-content: right;
+         background-color: #428d04;
+         margin: 20px 30px auto auto;
+         border-radius: 10px;
+         font-size: 18px;
+      }
+
+      h1 {
+         max-width: 50%;
+         text-align: center;
+         margin: 50px auto;
+         border-bottom: 2px solid #428d04;
+         font-family: 'Oswald';
+      }
+     
+      main {
+         margin: 3%;
+      }
+      
+      .contact-channel-wrapper {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         gap: 20px;
+      }
+       .contact-channel-wrapper a {
+         display: block;
+         text-decoration: none;
+         text-align: center;
+       }
+      .contact-channel-wrapper a .fa-solid {
+         display: block;
+         font-size: 2.5rem;
+      }
+      a .heading {
+         text-transform: uppercase;
+         margin: 10px 0;
+         font-weight: bold;
+         font-size: 1.1rem;
+      }
+
+      #map {
+         width: 100%;
+      }
+
+      @media screen and (max-width: 900px) {
+         .contact-channel-wrapper {
+            grid-template-columns: 1fr;
+            gap: 4em;
+         }
+      }
+
+
+
+   </style>
+</head>
+<body>
+   <header>
+      <a class="home" href="/">Home</a>
+
+      <h1>Contact Us</h1>
+   </header>
+
+   <main> 
+      <div class="contact-channel-wrapper">
+         <a href="#">
+            <i class="fa-solid fa-location-dot"></i>
+            <p class="heading">our main office</p>
+            <span>69b. Cruz Garden Estate, Kusenla Road, Ikate, Lekki, Lagos</span>
+         </a>
+         <a href="ttel:+234 915 386 9603">
+            <i class="fa-solid fa-phone"></i>
+            <p class="heading">our main office</p>
+            <span>+234 915 386 9603</span>
+         </a>
+         <a href="mailto:">
+            <i class="fa-solid fa-envelope"></i>
+            <p class="heading">our main office</p>
+            <span>oodugbade@crichton-ip.com.ng</span>
+         </a>
+      </div>
+
+      <div class="map-wrapper">
+         <div>
+            <h3 class="">we are here</h3>
+            <p>MON-FRI</p>
+         </div>
+        
+         <div id="map"></div>
+      </div>
+   </main>
+
+   
+
+   <script>
+      function initMap() {
+         let location = {lat: 6.524379, lng: 3.379206};
+         let map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 4,
+            center: location
+         });
+
+         let marker = new google.maps.Marker({
+            positition: location,
+            map: map
+         });
+      }
+   </script>
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap "></script>
+</body>
+</html>
